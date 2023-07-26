@@ -1,0 +1,92 @@
+.services{
+  margin-top: 220px;
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  h3{
+    color: $grey;
+    font-family: Poppins;
+    font-size: 20px;
+  }
+  h2{
+    color: $black;
+    font-family: Poppins;
+    font-size: 48px;
+    margin-top: 25px;
+  }
+  .service__options{
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  .option__button{
+    border-radius: 20px;
+    background: $green;
+    color: $white;
+    font-size: 16px;
+    padding: 5px 0;
+    width: 200px;
+    transition: 0.3s all;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .option__button_active{
+    border: 5px solid $green;
+    background: $white;
+    color: $green;
+  }
+  .service__posts{
+    display: flex;
+    gap: 30px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .service__post{
+    max-width: 420px;
+    border-radius: 60px 0px;
+    background: $white;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
+    padding: 30px 40px 30px 100px;
+  }
+  .service__post-title{
+    max-width: 320px;
+    color: $black;
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    &:before{
+      content:'';
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: -60px;
+      width: 45px;
+      height: 35px;
+      background: url("../../img/services/icon.png");
+    }
+  }
+  .service__post-body{
+      max-width: 320px;
+      margin-top: 10px;
+      color: $grey;
+      font-size: 18px;
+  }
+  .brown{
+    background: $brown;
+    color: $white;
+    &:before{
+      content:'';
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: -60px;
+      width: 45px;
+      height: 35px;
+      background: url("../../img/services/icon_brown.png");
+    }
+  }
+
+}

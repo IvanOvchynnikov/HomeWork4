@@ -1,0 +1,35 @@
+.header{
+  margin-top: 100px;
+  .container{
+    display: flex;
+    align-items: center;
+  }
+  p:nth-child(1){
+    font-size: 20px;
+    color: $grey;
+  }
+  p:nth-child(2) {
+    font-family: Poppins;
+    font-size: 72px;
+    color: $black;
+    margin-top: 15px;
+  }
+  p:nth-child(3){
+    font-size: 18px;
+    color: $grey;
+    margin-top: 25px;
+  }
+  .contact{
+    font-size: 18px;
+    color: $white;
+    border-radius: 20px 0px;
+    background: $green;
+    width: 149.055px;
+    height: 47.358px;
+    margin-top: 30px;
+    transition: 0.3s all;
+    &:hover{
+      background: $brown;
+    }
+  }
+}

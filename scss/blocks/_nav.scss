@@ -1,0 +1,45 @@
+.nav{
+  margin-top: 100px;
+  background: $white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+  }
+  &__item{
+    text-transform: uppercase;
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;
+  }
+  &__signup{
+    width: 96.844px;
+    height: 31.347px;
+    border-radius: 15px 0px;
+    background: $brown;
+    color: $white;
+    font-size: 16px;
+    transition: 0.2s all;
+    &:hover {
+      background: $green;
+    }
+  }
+  .progress_bar{
+    width: 50%;
+    height: 5px;
+    display: none;
+    margin-top: 10px;
+    background: linear-gradient(to right, $brown, $green);
+    transition: 0.2s all ease-out;
+  }
+}

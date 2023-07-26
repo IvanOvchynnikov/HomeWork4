@@ -1,0 +1,37 @@
+.loader{
+  width: 75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 2px;
+  height: 50px;
+  text-align: center;
+  background: inherit;
+  transition: 0.4s all;
+  > div{
+    height: 100%;
+    width: 8px;
+    animation: loader 1s 0s 6 ease-in-out;
+  }
+  .bar:nth-child(1){
+    background-color: $green;
+  }
+  .bar:nth-child(2){
+    background-color: $brown;
+    animation-delay: 0.2s;
+  }
+  .bar:nth-child(3){
+    background-color: $green;
+    animation-delay: 0.4s;
+  }
+  .bar:nth-child(4){
+    background-color: $brown;
+    animation-delay: 0.6s;
+  }
+  .bar:nth-child(5){
+    background-color: $green;
+    animation-delay: 0.8s;
+  }
+}
