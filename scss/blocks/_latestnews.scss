@@ -1,0 +1,73 @@
+.latestnews{
+  background: $white-grey;
+  padding: 100px 0px;
+  position: relative;
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  h3{
+    color: $grey;
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+  h2{
+    color: $black;
+    font-family: Poppins;
+    font-size: 48px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__list{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 650px;
+    transition: 0.3s all;
+    &-title{
+      color: $black;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-top: 40px;
+    }
+    p{
+      color: $grey;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-top: 20px;
+    }
+    &-button{
+      width: 271px;
+      height: 53.063px;
+      border-radius: 25px 0px;
+      background: $green;
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      transition: 0.3s all;
+      margin-top: 45px;
+      &:hover{
+        background: $brown;
+      }
+    }
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  .fade-in{
+    opacity: 0;
+    transition: opacity 10s ease;
+    transition: 0.7s all;
+  }
+  .show{
+    opacity: 1;
+  }
+}

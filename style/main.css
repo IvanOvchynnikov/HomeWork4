@@ -84,6 +84,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 1440px;
   margin: 0 auto;
@@ -360,9 +364,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px 0px;
   background: #37806B;
   margin-top: 30px;
+  transition: 0.3s all;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 700;
+}
+.about__button:hover {
+  background: #CAA892;
 }
 .about__distance {
   margin-top: 200px;
@@ -473,6 +481,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .reviews {
   padding: 130px 0px 240px 0px;
+  z-index: 1;
+  position: relative;
 }
 .reviews .container {
   display: flex;
@@ -491,14 +501,43 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-top: 5px;
 }
+.reviews__carousel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 5;
+  height: 55px;
+  margin-right: 10px;
+}
+.reviews__carousel__button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #646464;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.reviews__carousel .button_green {
+  background: #37806B;
+  color: #FFFFFF;
+}
 .reviews__card {
-  width: 571px;
-  height: 226px;
+  width: 650px;
+  height: 226px !important;
   border-radius: 70px 0px;
   background: #FFFFFF;
-  box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
-  padding: 40px 40px 40px 100px;
-  position: relative;
+  padding: 40px;
+  display: flex;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.reviews__card__content {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .reviews__card__title {
   display: flex;
@@ -525,28 +564,99 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
 }
-.reviews__card:before {
-  content: " ";
-  width: 130px;
-  height: 160px;
-  position: absolute;
-  left: -55px;
-  right: 0;
-  background: url(../../img/reviews/boy.png) no-repeat;
-}
-.reviews__card__girl:before {
-  content: " ";
-  width: 130px;
-  height: 160px;
-  position: absolute;
-  left: -55px;
-  right: 0;
-  background: url(../../img/reviews/girl.png) no-repeat;
-}
 .reviews__cards {
   display: flex;
   margin-top: 100px;
   justify-content: space-between;
+}
+.reviews .swiper {
+  width: 100%;
+  height: 100%;
+}
+.reviews .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviews .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750px;
+  height: 250px;
+}
+
+.latestnews {
+  background: #F8F8F8;
+  padding: 100px 0px;
+  position: relative;
+}
+.latestnews .container {
+  display: flex;
+  flex-direction: column;
+}
+.latestnews h3 {
+  color: #646464;
+  font-family: Poppins;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+.latestnews h2 {
+  color: #212121;
+  font-family: Poppins;
+  font-size: 48px;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+.latestnews__list {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.latestnews__item {
+  max-width: 650px;
+  transition: 0.3s all;
+}
+.latestnews__item-title {
+  color: #212121;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-top: 40px;
+}
+.latestnews__item p {
+  color: #646464;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 20px;
+}
+.latestnews__item-button {
+  width: 271px;
+  height: 53.063px;
+  border-radius: 25px 0px;
+  background: #37806B;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  transition: 0.3s all;
+  margin-top: 45px;
+}
+.latestnews__item-button:hover {
+  background: #CAA892;
+}
+.latestnews__item:hover {
+  transform: scale(1.1);
+}
+.latestnews .fade-in {
+  opacity: 0;
+  transition: opacity 10s ease;
+  transition: 0.7s all;
+}
+.latestnews .show {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

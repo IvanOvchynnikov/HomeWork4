@@ -77,4 +77,53 @@ serviceOptions.addEventListener('click',(event)=>{
     }
 })
 optionButton[0].click();
+//Swiper
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 70,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".button_green",
+        prevEl: ".previous",
+    },
+});
+
+//Latest News
+
+const isElementInViewport=(elem)=>{
+    let rect = elem.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+const checkElementsOnScroll=()=>{
+    let elements = document.querySelectorAll(".fade-in");
+    elements.forEach((elem) =>{
+        if (isElementInViewport(elem) && !elem.classList.contains("show")) {
+            elem.classList.add("show");
+        }
+    });
+}
+window.addEventListener("scroll", ()=>{
+    checkElementsOnScroll();
+});
+
+const latestNewsLink = document.querySelector("#blog");
+latestNewsLink.addEventListener("click", function(e) {
+    e.preventDefault();
+    checkElementsOnScroll();
+});
+
+
+
+
+
 

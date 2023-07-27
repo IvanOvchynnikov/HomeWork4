@@ -2,11 +2,12 @@
 @import 'variables';
 @import 'animation';
 @import "blocks/null";
-
 *{
   font-family: 'Open Sans', sans-serif;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .container{
   width: 1440px;
   margin: 0 auto;
@@ -22,3 +23,4 @@
 @import 'blocks/about';
 @import "blocks/results";
 @import 'blocks/reviews';
+@import 'blocks/latestnews';

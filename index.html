@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>HomeWork4</title>
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
 <div class="loader">
@@ -24,10 +26,10 @@
             </div>
             <ul class="nav__list">
                 <li><a href="#" class="nav__item">Home</a></li>
-                <li><a href="#" class="nav__item">Project</a></li>
-                <li><a href="#" class="nav__item">Services</a></li>
-                <li><a href="#" class="nav__item">About</a></li>
-                <li><a href="#" class="nav__item">Blog</a></li>
+                <li><a href="#header" class="nav__item">Project</a></li>
+                <li><a href="#services" class="nav__item">Services</a></li>
+                <li><a href="#about" class="nav__item">About</a></li>
+                <li><a href="#blog" class="nav__item">Blog</a></li>
                 <li><a href="#" class="nav__item">Shop</a></li>
                 <li><a href="#" class="nav__item">Contact</a></li>
                 <button class="nav__signup">Sign Up</button>
@@ -35,7 +37,7 @@
         </div>
         <div class="progress_bar"></div>
     </nav>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__content">
                 <p>MODERN INTERIOR</p>
@@ -50,7 +52,7 @@
             </div>
         </div>
     </header>
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h3>WHAT WE DO</h3>
             <h2>Our Service</h2>
@@ -65,7 +67,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="#about">
         <div class="container">
             <div class="about__wrapper">
                 <img src="img/about/image1.png" alt="interior">
@@ -96,7 +98,7 @@
             </div>
         </div>
     </section>
-    <section class="results">
+    <section class="results" id="results">
         <div class="container">
             <h1 class="results__title">3000+ Completed Work
                 Which WE have Successfully Done</h1>
@@ -123,42 +125,162 @@
             </div>
         </div>
     </section>
-    <section class="reviews">
+
+    <section class="reviews" id="reviews">
         <div class="container">
             <h3>TESTIMONIALS</h3>
             <h2>Client says about us</h2>
-            <div class="reviews__carousel">
-                <button class="reviews__carousel__previous"></button>
-                <button class="reviews__carousel__next"></button>
-            </div>
-            <div class="reviews__cards">
-                <div class="reviews__card">
-                    <div class="reviews__card__header">
-                        <div class="reviews__card__title">
-                            Louis Saville
-                            <h6>/CEO at Google inc</h6>
-                        </div>
-                        <img src="img/reviews/lapki.svg">
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.</p>
+            <div class="swiper mySwiper wrapper">
+                <div class="reviews__carousel">
+                    <button class="reviews__carousel__button previous"><</button>
+                    <button class="reviews__carousel__button button_green">></button>
                 </div>
-                <div class="reviews__card reviews__card__girlgit">
-                    <div class="reviews__card__header">
-                        <div class="reviews__card__title">
-                            Rekha Varadwaz
-                            <h6>/Manager at Nike inc</h6>
+                <div class="reviews__cards swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="reviews__card">
+                            <img src="img/reviews/boy.png">
+                            <div class="reviews__card__content">
+                                <div class="reviews__card__header">
+                                    <div class="reviews__card__title">
+                                        Louis Saville
+                                        <h6>/CEO at Google inc</h6>
+                                    </div>
+                                    <img src="img/reviews/lapki.svg">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</p>
+                            </div>
                         </div>
-                        <img src="img/reviews/lapki.svg">
                     </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.</p>
+                    <div class="swiper-slide">
+                        <div class="reviews__card">
+                            <img src="img/reviews/girl.png">
+                            <div class="reviews__card__content">
+                                <div class="reviews__card__header">
+                                    <div class="reviews__card__title">
+                                        Rekha Varadwaz
+                                        <h6> /Manager at Nike inc</h6>
+                                    </div>
+                                    <img src="img/reviews/lapki.svg">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__card">
+                            <img src="img/reviews/boy.png">
+                            <div class="reviews__card__content">
+                                <div class="reviews__card__header">
+                                    <div class="reviews__card__title">
+                                        Ivan Ovchynnikov
+                                        <h6> /Student at Sigma</h6>
+                                    </div>
+                                    <img src="img/reviews/lapki.svg">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__card">
+                            <img src="img/reviews/boy.png">
+                            <div class="reviews__card__content">
+                                <div class="reviews__card__header">
+                                    <div class="reviews__card__title">
+                                        Taras Shevchenko
+                                        <h6> /Team Lead at EPAM</h6>
+                                    </div>
+                                    <img src="img/reviews/lapki.svg">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__card">
+                            <img src="img/reviews/girl.png">
+                            <div class="reviews__card__content">
+                                <div class="reviews__card__header">
+                                    <div class="reviews__card__title">
+                                        Lina Kostenko
+                                        <h6> /Model in Paris</h6>
+                                    </div>
+                                    <img src="img/reviews/lapki.svg">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__card">
+                            <img src="img/reviews/boy.png">
+                            <div class="reviews__card__content">
+                                <div class="reviews__card__header">
+                                    <div class="reviews__card__title">
+                                        Dima Tuzhanskiy
+                                        <h6> /Rescuer at Aqua City</h6>
+                                    </div>
+                                    <img src="img/reviews/lapki.svg">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="latestnews" id="blog">
+        <div class="container">
+            <h3>
+                LETEST NEWS
+            </h3>
+            <h2>From Our Blog</h2>
+            <div class="latestnews__list">
+                <div class="latestnews__item fade-in">
+                    <img src="img/latestnews/img1.png">
+                    <div class="latestnews__item-title">
+                        2020 Interior Design Trends
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="latestnews__item-button">CONTINUE READING....</button>
+                </div>
+                    <div class="latestnews__item fade-in">
+                        <img src="img/latestnews/img2.png">
+                        <div class="latestnews__item-title">
+                            28 Notable Product at ARC Interior Design
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            incididunt ut labore et dolore magna aliqua.</p>
+                        <button class="latestnews__item-button">CONTINUE READING....</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container">
+            <h1>DON’T FORGET TO SIGN UP</h1>
+            <p>Find out early about all upcoming promotions and new product releases with
+                our newsletter.</p>
+            <div class="form__input">
+                <input type="text" class="form__input-name" >
+                <input type="text" class="form__input-surname">
+            </div>
+            <input type="text" class="form__email">
+            <button class="form__subscribe"></button>
         </div>
     </section>
 </main>
