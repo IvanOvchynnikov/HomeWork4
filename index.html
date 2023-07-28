@@ -31,8 +31,8 @@
                 <li><a href="#about" class="nav__item">About</a></li>
                 <li><a href="#blog" class="nav__item">Blog</a></li>
                 <li><a href="#" class="nav__item">Shop</a></li>
-                <li><a href="#" class="nav__item">Contact</a></li>
-                <button class="nav__signup">Sign Up</button>
+                <li><a href="#contact" class="nav__item">Contact</a></li>
+                <button class="nav__signup"><a href="#signup">Sign Up</a></button>
             </ul>
         </div>
         <div class="progress_bar"></div>
@@ -67,7 +67,7 @@
             </div>
         </div>
     </section>
-    <section class="about" id="#about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__wrapper">
                 <img src="img/about/image1.png" alt="interior">
@@ -270,19 +270,69 @@
             </div>
         </div>
     </section>
-    <section class="form">
+    <form class="form" id="signup">
         <div class="container">
-            <h1>DON’T FORGET TO SIGN UP</h1>
+            <div class="form__title">DON’T FORGET TO SIGN UP</div>
+            <div class="form__line"></div>
             <p>Find out early about all upcoming promotions and new product releases with
                 our newsletter.</p>
             <div class="form__input">
-                <input type="text" class="form__input-name" >
-                <input type="text" class="form__input-surname">
+                <input type="text" class="form__input-item form__name"  placeholder="Enter your name.....">
+                <input type="text" class="form__input-item form__sname"  placeholder="Enter your surname.....">
             </div>
-            <input type="text" class="form__email">
-            <button class="form__subscribe"></button>
+            <input type="text" class="form__input-item form__email"  placeholder="Enter your email.....">
+            <button class="form__subscribe" type="submit">SUBSCRIBE</button>
         </div>
-    </section>
+    </form>
+    <div class="popup">
+        <div class="popup__content">
+            <a href="" class="popup__close">X</a>
+            <div class="popup__title">Вам пощастило!</div>
+            <div class="popup__subtitle"></div>
+        </div>
+    </div>
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__logo">
+                <img src="img/nav/logo.png" alt="logo">
+                <p>But i must explain to you all this mistaken
+                    idea of dencouncing pleasure.</p>
+            </div>
+            <div class="footer__item">
+                <div class="footer__item-title">Quick Links</div>
+                <a href="#" class="footer__item-link">About Our Company</a>
+                <a href="#" class="footer__item-link">Services WE provide</a>
+                <a href="#" class="footer__item-link">Career & Opportunity</a>
+                <a href="#" class="footer__item-link">Privacy & Policy</a>
+                <a href="#" class="footer__item-link">Contact US</a>
+            </div>
+            <div class="footer__item">
+                <div class="footer__item-title">Company</div>
+                <a href="#" class="footer__item-link">About Company</a>
+                <a href="#" class="footer__item-link">Our Testomonials</a>
+                <a href="#" class="footer__item-link">Latest News</a>
+                <a href="#" class="footer__item-link">Our Mission</a>
+                <a href="#" class="footer__item-link">Get a free Quot</a>
+            </div>
+            <div class="footer__item">
+                <div class="footer__item-title">Contact Us</div>
+                <p class="footer__item-link">Sagrada Familia, Herba</p>
+                <p class="footer__item-link">Street Front USA</p>
+                <p class="footer__item-link">brandoxide@gmail.com</p>
+                <p class="footer__item-link">002-568423591</p>
+            </div>
+            <div class="footer__item">
+                <div class="footer__item-title">Follow Us</div>
+                <div class="footer__item-socials">
+                    <a href="https://www.facebook.com/" class="footer__item-social" target="_blank"><img src="img/footer/facebook.svg" alt="facebook"></a>
+                    <a href="https://www.twitter.com/" class="footer__item-social twitter" target="_blank"><img src="img/footer/twitter.svg" alt="twitter"></a>
+                    <a href="https://www.instagram.com/" class="footer__item-social" target="_blank"><img src="img/footer/instagram.svg" alt="instagram"></a>
+                    <a href="https://www.linkedin.com/" class="footer__item-social" target="_blank"><img src="img/footer/linked.svg" alt="linkedin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__subscription"></div>
+    </footer>
 </main>
 <script src="js/script.js"></script>
 </body>

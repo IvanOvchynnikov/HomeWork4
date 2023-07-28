@@ -1,0 +1,68 @@
+.footer{
+  background: $white-grey;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+  }
+  .footer__logo{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    img{
+      width: 151px;
+      height: 47px;
+    }
+    p{
+      color: $grey;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-top: 15px;
+    }
+  }
+  .footer__item{
+    display: flex;
+    flex-direction: column;
+    &-title{
+      color: $black;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 40px;
+      margin-bottom: 7px;
+    }
+    &-link{
+      color: $grey;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 50px;
+    }
+    &-socials{
+      display: flex;
+      gap: 10px
+    }
+    &-social{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 37.166px;
+      height: 37.166px;
+      background: #D5D5D5;
+    }
+    .twitter{
+      background: $green;
+    }
+  }
+  &__subscription{
+    color: $grey;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid $grey;
+    ok{
+      color: $green;
+    }
+  }
+}

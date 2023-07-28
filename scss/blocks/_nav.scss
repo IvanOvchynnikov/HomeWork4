@@ -27,8 +27,11 @@
     height: 31.347px;
     border-radius: 15px 0px;
     background: $brown;
-    color: $white;
-    font-size: 16px;
+    a{
+      color: $white;
+      font-size: 16px;
+      text-decoration: none;
+    }
     transition: 0.2s all;
     &:hover {
       background: $green;

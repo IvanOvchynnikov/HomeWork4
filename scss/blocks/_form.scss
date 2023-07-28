@@ -1,0 +1,114 @@
+.form{
+  padding: 80px 0;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    color: $black;
+    font-family: Poppins;
+    font-size: 48px;
+    line-height: 28px;
+    letter-spacing: 3.84px;
+    text-align: center;
+  }
+  &__line{
+    width: 450px;
+    border-bottom: 1px solid #C4C4C4;
+    margin-top: 40px;
+  }
+  p{
+    color: $grey;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 40px;
+    width: 640px;
+  }
+  &__input{
+      display: flex;
+      gap: 100px;
+      margin-top: 40px;
+    &-item{
+      width: 338px;
+      height: 48px;
+    }
+  }
+  .form__input-item{
+    color: $grey;
+    font-family: Raleway;
+    font-size: 18px;
+    line-height: 55px;
+    border-radius: 20px 0px;
+    background: #EEE;
+    padding-left: 30px;
+  }
+  &__email{
+    width: 772px;
+    height: 50px;
+    margin-top: 60px;
+  }
+  &__subscribe{
+    width: 180px;
+    height: 50px;
+    margin-top: 90px;
+    border-radius: 0px 0px 20px 0px;
+    background: $green;
+    transition: 0.3s all;
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 55px; /* 305.556% */
+    &:hover{
+      background: $brown;
+    }
+  }
+  .error{
+    border: 1px solid red;
+  }
+}
+.popup{
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  top:0;
+  left:0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__content{
+    background: $white;
+    padding: 40px;
+    width: 800px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+  }
+  &__title{
+    color: $black;
+    font-family: Poppins;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: center;
+  }
+  &__close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    color: #ee4545;
+    text-decoration: none;
+  }
+  &__subtitle{
+    color: $grey;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+}

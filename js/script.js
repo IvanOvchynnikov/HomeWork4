@@ -5,7 +5,7 @@ const main=document.querySelector('.main');
 setTimeout(() => {
     loader.style.display='none';
     main.style.display='block';
-}, 500)
+}, 5000)
 
 
 const progressBar=document.querySelector('.progress_bar');
@@ -122,7 +122,96 @@ latestNewsLink.addEventListener("click", function(e) {
     checkElementsOnScroll();
 });
 
+//FORM
 
+const form=document.querySelector('.form');
+let formInputs=document.querySelectorAll('.form__input-item');
+let inputName=document.querySelector('.form__name');
+let inputSurname=document.querySelector('.form__sname');
+let inputEmail=document.querySelector('.form__email');
+let popup=document.querySelector('.popup');
+let popupSubtitle=document.querySelector('.popup__subtitle');
+let popupClose=document.querySelector('.popup__close');
+
+const validateEmail=(email)=>{
+    return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(String(email).toLowerCase());
+}
+const validateName=(name)=>{
+    return /[A-Z][a-z]{0,}$/.test(String(name));
+}
+
+
+form.onsubmit=()=>{
+    let emailVal=inputEmail.value;
+    let nameVal=inputName.value;
+    let surnameVal=inputSurname.value;
+    formInputs.forEach((item)=>{
+        if(item.value===''){
+            item.classList.add('error');
+        }
+        else{
+            item.classList.remove('error');
+        }
+    })
+
+    if(!validateEmail(emailVal)){
+       inputEmail.classList.add('error');
+    }
+    else{
+        inputEmail.classList.remove('error');
+    }
+    if(!validateName(nameVal)){
+        inputName.classList.add('error');
+    }
+    else{
+        inputName.classList.remove('error');
+    }
+    if(!validateName(surnameVal)){
+        inputSurname.classList.add('error');
+    }
+    else{
+        inputSurname.classList.remove('error');
+    }
+    let cur=0;
+    formInputs.forEach((item)=>{
+        if(item.classList.contains('error')){
+           cur++;
+        }
+    })
+    if(cur===0 && nameVal==="Sigma"){
+        const today=new Date();
+        popup.style.visibility='visible';
+        popupSubtitle.innerHTML+=`В цей день ${today.getDate()}.${today.getMonth()+1}.${today.getFullYear()} 
+        для користувачів з  вашим іменем знижка на замовлення 120%!`;
+        setTimeout(()=>{
+            popup.style.visibility='hidden';
+            popupSubtitle.innerHTML='';
+        },5000)
+    }
+    if(cur==0){
+        if(window.localStorage ){
+            localStorage["name"] = nameVal;
+            localStorage["surname"] = surnameVal;
+            localStorage["email"] = emailVal;
+            inputName.value='';
+            inputSurname.value='';
+            inputEmail.value='';
+        }
+        else alert(" localStorage не підтримує ваш браузер ");
+    }
+    return false;
+}
+
+popupClose.addEventListener('click',(e)=>{
+    popup.style.visibility='hidden';
+    popupSubtitle.innerHTML='';
+})
+
+//FOOTER
+
+const footerSubscription=document.querySelector('.footer__subscription');
+const date=new Date();
+footerSubscription.innerHTML+=`Copyright @ ${date.getFullYear()} Brandoxide.all right reserved.`
 
 
 
