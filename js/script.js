@@ -213,6 +213,36 @@ const footerSubscription=document.querySelector('.footer__subscription');
 const date=new Date();
 footerSubscription.innerHTML+=`Copyright @ ${date.getFullYear()} Brandoxide.all right reserved.`
 
+//CHECKING AFK
 
+const popupAfk=document.querySelector('.popup-afk');
+const popupAfkClose=document.querySelector('.popup-afk__close');
+
+let startX=window.pageXOffset;
+let startY=window.pageYOffset;
+
+let action=0;
+setInterval(()=>{
+    let endX=window.pageXOffset;
+    let endY=window.pageYOffset;
+    if(endX===startX && endY===startY){
+        popupAfk.style.visibility='visible';
+        action=0;
+        setTimeout(()=>{
+            if(action===0) console.log('Window was closed');
+            else action=0;
+        },5000)
+
+    }
+    else{
+        startX=endX;
+        startY=endY;
+    }
+},60000)
+popupAfkClose.addEventListener('click',(e)=>{
+    popupAfk.style.visibility='hidden';
+    action=1;
+    e.preventDefault();
+})
 
 
