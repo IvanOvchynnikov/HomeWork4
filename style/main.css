@@ -231,6 +231,7 @@ html {
 
 .header {
   margin-top: 100px;
+  position: relative;
 }
 .header .container {
   display: flex;
@@ -264,9 +265,19 @@ html {
 .header .contact:hover {
   background: #CAA892;
 }
+.header:after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
+}
 
 .services {
   margin-top: 220px;
+  position: relative;
 }
 .services .container {
   display: flex;
@@ -356,9 +367,19 @@ html {
   height: 35px;
   background: url("../../img/services/icon_brown.png");
 }
+.services:after {
+  content: " ";
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
+}
 
 .about {
   margin-top: 300px;
+  position: relative;
 }
 .about .container {
   display: flex;
@@ -424,12 +445,32 @@ html {
   margin-top: 200px;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.about__distance:after {
+  content: " ";
+  position: absolute;
+  bottom: 30%;
+  right: -18%;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
+}
+.about:after {
+  content: " ";
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
 }
 
 .results {
   margin-top: 200px;
   background: #F8F8F8;
   padding: 90px 0 90px 0;
+  position: relative;
 }
 .results .container {
   display: flex;
@@ -525,6 +566,16 @@ html {
 .results .card4 {
   grid-column-start: 8;
   grid-row-start: 3;
+}
+.results:after {
+  content: " ";
+  position: absolute;
+  bottom: -8%;
+  left: 0;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
+  z-index: 3;
 }
 
 .reviews {
@@ -706,6 +757,15 @@ html {
 .latestnews .show {
   opacity: 1;
 }
+.latestnews:after {
+  content: " ";
+  position: absolute;
+  bottom: -7%;
+  right: 0;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
+}
 
 .form {
   padding: 80px 0;
@@ -825,6 +885,7 @@ html {
 
 .footer {
   background: #F8F8F8;
+  position: relative;
 }
 .footer .container {
   display: flex;
@@ -890,6 +951,15 @@ html {
 }
 .footer__subscription ok {
   color: #37806B;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  top: -12%;
+  left: 1%;
+  width: 212.209px;
+  height: 150.418px;
+  background: url(../../img/squares.svg);
 }
 
 /*# sourceMappingURL=main.css.map */

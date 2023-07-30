@@ -1,5 +1,6 @@
 .services{
   margin-top: 220px;
+  position: relative;
   .container{
     display: flex;
     flex-direction: column;
@@ -87,6 +88,15 @@
       height: 35px;
       background: url("../../img/services/icon_brown.png");
     }
+  }
+  &:after{
+    content: ' ';
+    position: absolute;
+    bottom: -200px;
+    right:0;
+    width: 212.209px;
+    height: 150.418px;
+    background: url(../../img/squares.svg);
   }
 
 }

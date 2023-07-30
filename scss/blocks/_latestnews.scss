@@ -70,4 +70,13 @@
   .show{
     opacity: 1;
   }
+  &:after{
+    content: ' ';
+    position: absolute;
+    bottom: -7%;
+    right: 0;
+    width: 212.209px;
+    height: 150.418px;
+    background: url(../../img/squares.svg);
+  }
 }

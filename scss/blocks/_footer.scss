@@ -1,5 +1,6 @@
 .footer{
   background: $white-grey;
+  position: relative;
   .container{
     display: flex;
     justify-content: space-between;
@@ -64,5 +65,14 @@
     ok{
       color: $green;
     }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: -12%;
+    left: 1%;
+    width: 212.209px;
+    height: 150.418px;
+    background: url(../../img/squares.svg);
   }
 }
